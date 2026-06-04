@@ -1,59 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎂 Sweet Moments Bakery - Website Template
 
-## Getting Started
+A modern, responsive, and elegant website template built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. Designed specifically for artisanal bakeries, cake shops, and boutique patisseries.
 
-First, run the development server:
+![Project Preview](https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Responsive Design:** Fully optimized for mobile, tablet, and desktop.
+- **Dynamic Gallery:** Integrated with Cloudinary for seamless image management.
+- **Custom Components:** Polished sections for Services, About Us, and a custom-designed Navbar.
+- **SEO Optimized:** Dynamic metadata and JSON-LD structured data for better search ranking.
+- **Interactive UI:** Smooth animations and a custom lightbox for high-quality cake showcases.
+- **Easy Configuration:** Centralized business settings in `src/lib/cake-business-config.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/reucodec07/cake_business_template.git
+   cd cake_business_template
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root and add your Cloudinary credentials:
+   ```env
+   NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_API_KEY=your_api_key
+   CLOUDINARY_API_SECRET=your_api_secret
+   ```
 
-## Deploy on Vercel
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to see the site live.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Customization
 
+Most of the site's content can be customized by editing `src/lib/cake-business-config.ts`. Here you can update:
+- Business name, phone, and email.
+- Navigation links and social media profiles.
+- Service offerings and pricing.
+- Theme colors and SEO metadata.
 
-Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Deva Williamson</a> on <a href="https://unsplash.com/photos/baked-cupcake-S2jw81lfrG0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@xokatierosario?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Katie Rosario</a> on <a href="https://unsplash.com/photos/pink-and-white-cake-on-white-ceramic-plate-QNyRp21hb5I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Deva Williamson</a> on <a href="https://unsplash.com/photos/white-and-red-cake-with-black-and-white-icing-on-top-rHz-DkDgA1k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Deva Williamson</a> on <a href="https://unsplash.com/photos/macaroon-on-cake-tW0Ix_Ajg6Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Deva Williamson</a> on <a href="https://unsplash.com/photos/macaroon-on-cake-tW0Ix_Ajg6Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@wachalala?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jr R</a> on <a href="https://unsplash.com/photos/chocolate-cupcake-with-white-icing-on-white-ceramic-plate-90HdOlGbjck?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@heatherbarnes?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Heather Barnes</a> on <a href="https://unsplash.com/photos/round-white-icing-covered-cake-_TN1m5R1pFI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@joshuaglass?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Joshua Glass</a> on <a href="https://unsplash.com/photos/a-pink-cake-with-white-frosting-and-strawberries-on-top-0KpfliRVLJs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@mikemeex?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mike Meeks</a> on <a href="https://unsplash.com/photos/close-up-photography-of-cupcakes-zk-fclJdGas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Deva Williamson</a> on <a href="https://unsplash.com/photos/blue-and-white-polka-dot-cake-on-pink-and-white-heart-shaped-cake-stand-K1GjJQgOqa8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@biglaughkitchen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Deva Williamson</a> on <a href="https://unsplash.com/photos/pink-cherry-cake-on-white-footed-cake-tray-HHebuDYjP4I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@madseneqvist?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mads Eneqvist</a> on <a href="https://unsplash.com/photos/a-white-wedding-cake-with-fresh-strawberries-and-flowers-Xb5c2x6wJPc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@madseneqvist?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mads Eneqvist</a> on <a href="https://unsplash.com/photos/a-white-wedding-cake-with-fresh-strawberries-and-flowers-Xb5c2x6wJPc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@madseneqvist?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mads Eneqvist</a> on <a href="https://unsplash.com/photos/a-white-wedding-cake-with-fresh-strawberries-and-flowers-Xb5c2x6wJPc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@nwphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Walker</a> on <a href="https://unsplash.com/photos/white-and-red-rose-bouquet-pq0TD55ZihQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@nwphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Walker</a> on <a href="https://unsplash.com/photos/white-and-red-rose-bouquet-pq0TD55ZihQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@taylorheeryphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Taylor Heery</a> on <a href="https://unsplash.com/photos/cupcakes-on-stainless-steel-rack-mF-GTUeLofs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@masajada?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Daniel Masajada</a> on <a href="https://unsplash.com/photos/baked-breads-Kdtd6fDxkmI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@badun?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Anastasiya Badun</a> on <a href="https://unsplash.com/photos/a-display-case-filled-with-lots-of-different-types-of-pastries--fR9weoYba0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-Photo by <a href="https://unsplash.com/@brookelark?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Brooke Lark</a> on <a href="https://unsplash.com/photos/assorted-donuts-top-of-white-area-V4MBq8kue3U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-      
+## 📦 Tech Stack
+
+- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** Custom SVG & Lucide
+- **Media:** [Cloudinary](https://cloudinary.com/)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+Built with ❤️ for Sweet Moments Bakery.
