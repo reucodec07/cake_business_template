@@ -36,12 +36,18 @@ export function Footer(): JSX.Element {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-gradient-to-br from-gray-900 via-rose-900 to-amber-900 text-white py-16 lg:py-20 relative overflow-hidden">
+        <footer className="bg-[#4a2511] text-[#fdfbf7] py-16 lg:py-20 relative mt-10">
+            {/* Scalloped Frosting Border */}
+            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none -translate-y-[99%]">
+                <svg className="relative block w-full h-[30px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C50.21,18.66,98.67,40.44,152.12,52.26,198.81,62.6,249.25,65.23,321.39,56.44Z" className="fill-[#4a2511]"></path>
+                </svg>
+            </div>
+
             {/* Background decorative elements */}
-            <div className="absolute inset-0">
-                <div className="absolute top-10 right-20 w-32 h-32 bg-rose-400/10 rounded-full animate-float"></div>
-                <div className="absolute bottom-20 left-16 w-24 h-24 bg-amber-400/10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-                <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-rose-300/5 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-10 right-20 w-32 h-32 bg-[#8c4b26] rounded-full blur-3xl opacity-20"></div>
+                <div className="absolute bottom-20 left-16 w-24 h-24 bg-[#6e3717] rounded-full blur-2xl opacity-40"></div>
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -66,7 +72,7 @@ export function Footer(): JSX.Element {
                                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-rose-500 to-rose-600 text-white rounded-full hover:from-rose-600 hover:to-rose-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
                             >
                                 <span className="mr-2 text-lg">✆</span>
-                                Call Us
+                                Book a Call
                             </a>
                             <a
                                 href={`mailto:${cakeBusinessConfig.business.email}`}
@@ -120,7 +126,7 @@ export function Footer(): JSX.Element {
 
                     {/* Services & Hours */}
                     <div className="animate-fadeInUp" style={{animationDelay: '0.4s'}}>
-                        <h4 className="font-script text-2xl font-bold mb-6 text-amber-200">Our Specialties</h4>
+                        <h4 className="font-script text-2xl font-bold mb-6 text-amber-200">Our Services</h4>
                         <ul className="space-y-3 mb-8">
                             {cakeBusinessConfig.services.slice(0, 4).map((service) => (
                                 <li key={service.id}>
@@ -141,15 +147,15 @@ export function Footer(): JSX.Element {
                             <div className="space-y-2 text-sm text-gray-300">
                                 <div className="flex justify-between">
                                     <span>Mon - Fri</span>
-                                    <span className="font-medium">7AM - 7PM</span>
+                                    <span className="font-medium">9AM - 5:30PM</span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span>Saturday</span>
-                                    <span className="font-medium">8AM - 6PM</span>
+                                    <span className="font-medium">Closed</span>
                                 </div>
                                 <div className="flex justify-between">
                                     <span>Sunday</span>
-                                    <span className="font-medium">9AM - 4PM</span>
+                                    <span className="font-medium">Closed</span>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +204,7 @@ export function Footer(): JSX.Element {
                 {/* Specialties showcase */}
                 <div className="mt-12 pt-8 border-t border-white/20 animate-fadeInUp" style={{animationDelay: '0.8s'}}>
                     <div className="text-center">
-                        <h4 className="font-script text-2xl font-bold text-rose-200 mb-6">What Makes Us Special</h4>
+                        <h4 className="font-script text-2xl font-bold text-rose-200 mb-6">Why Choose Our Cakes</h4>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                             {cakeBusinessConfig.business.specialties.map((specialty, index) => (
                                 <div
@@ -229,7 +235,7 @@ export function Footer(): JSX.Element {
                 {/* Final tagline */}
                 <div className="text-center mt-8 animate-fadeInUp" style={{animationDelay: '1.2s'}}>
                     <p className="font-script text-lg text-rose-200 opacity-80">
-                        Sweet dreams are made of cakes... and we deliver them fresh daily! ♡
+                        Built to be rewritten quickly, customized easily, and launched with confidence. ♡
                     </p>
                 </div>
             </div>

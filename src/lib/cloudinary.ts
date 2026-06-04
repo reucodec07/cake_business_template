@@ -137,16 +137,18 @@ export type CakeCategory = keyof typeof CAKE_TAGS;
  */
 export function getCategoryDisplayName(category: string): string {
     const categoryMap: Record<string, string> = {
-        'all': 'All Creations',
-        'wedding': 'Wedding Cakes',
-        'birthday': 'Birthday Cakes',
-        'baby-shower': 'Baby Shower Cakes',
-        'christmas': 'Christmas & Holiday',
-        'cupcakes': 'Cupcakes & Mini Treats',
-        'graduation': 'Graduation Celebrations',
-        'anniversary': 'Anniversary Cakes',
-        'custom': 'Custom Creations',
-        'pastries': 'Pastries & Breads',
+        'all': 'All Work',
+        'wedding': 'Signature Projects',
+        'birthday': 'Launch Campaigns',
+        'baby-shower': 'Client Moments',
+        'christmas': 'Seasonal Updates',
+        'cupcakes': 'Small Formats',
+        'corporate': 'Business Sites',
+        'graduation': 'Milestone Events',
+        'anniversary': 'Ongoing Partnerships',
+        'custom': 'Custom Builds',
+        'pastries': 'Fresh Concepts',
+        'desserts': 'Featured Picks',
     };
     return categoryMap[category] || category.charAt(0).toUpperCase() + category.slice(1);
 }
@@ -229,7 +231,7 @@ export function transformCloudinaryImage(cloudinaryImage: CloudinaryImage, categ
 /**
  * Get fallback images for a category - now uses Cloudinary with general tags
  */
-export function getFallbackImages(category: CakeCategory): Array<{
+export function getFallbackImages(): Array<{
     id: string;
     title: string;
     image: string;

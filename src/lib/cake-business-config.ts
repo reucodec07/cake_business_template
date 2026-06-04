@@ -1,6 +1,6 @@
 // src/lib/cake-business-config.ts
-// Central configuration file for cake shop business template
-// Update this file to customize the entire website for different cake shop clients
+// Central configuration file for the template site
+// Update this file to customize the entire website in one place
 
 
 export interface CakeBusinessConfig {
@@ -54,34 +54,34 @@ export interface CakeBusinessConfig {
 
 export const cakeBusinessConfig: CakeBusinessConfig = {
     business: {
-        name: "2 Have & 2 Eat Cakes",
-        tagline: "Where Every Bite is Pure Bliss",
-        description: "We are a family-owned bakery specializing in custom cakes, cupcakes, and pastries made fresh daily with the finest ingredients. From wedding cakes to birthday celebrations, we create sweet memories that last a lifetime.",
-        phone: "0752 108 2100",
-        email: "cakes2haven2eat@hotmail.com",
+        name: "Sweet Moments Bakery",
+        tagline: "Artisan Cakes for Every Occasion",
+        description: "Beautiful, custom-designed cakes baked from scratch using the finest ingredients. From elegant wedding centerpieces to fun birthday treats, we make your sweetest dreams come true.",
+        phone: "(555) 123-4567",
+        email: "hello@sweetmomentsbakery.example.com",
         address: {
-            street: "The Old Armoury",
-            city: "Market Drayton",
-            state: "Staffordshire",
-            zip: "TF9 3DH"
+            street: "123 Baker Street",
+            city: "Sweetville",
+            state: "CA",
+            zip: "90210"
         },
         specialties: [
-            "Custom Wedding Cakes",
-            "Birthday Celebrations",
-            "Corporate Events",
-            "Seasonal Specialties"
+            "Custom Cakes",
+            "Wedding Tiers",
+            "Fresh Pastries",
+            "Gluten-Free Options"
         ]
     },
     navigation: [
         { label: "Home", href: "/" },
         { label: "About", href: "/about" },
-        { label: "Our Cakes", href: "/our-cakes" },
-        { label: "Order Now", href: "/contact" }
+        { label: "Portfolio", href: "/our-cakes" },
+        { label: "Contact", href: "/contact" }
     ],
     hero: {
-        title: "Handcrafted with Love, Delivered with Joy",
-        subtitle: "Transform your special moments into sweet memories with our artisanal cakes and pastries, made fresh daily using premium ingredients and traditional techniques",
-        ctaText: "Order Your Dream Cake",
+        title: "Make Your Celebration Sweeter",
+        subtitle: "Explore our gallery of custom designs and order the perfect centerpiece for your next big event.",
+        ctaText: "Order Your Cake",
         ctaLink: "/contact",
         backgroundImage: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
     },
@@ -89,77 +89,77 @@ export const cakeBusinessConfig: CakeBusinessConfig = {
         {
             id: "wedding-cakes",
             title: "Wedding Cakes",
-            description: "Elegant multi-tier wedding cakes customized to match your special day. From classic vanilla to exotic flavors, we create the perfect centerpiece for your celebration.",
-            icon: "♡",
-            price: "Starting at £299"
-        },
-        {
-            id: "birthday-cakes",
-            title: "Birthday Cakes",
-            description: "Fun and festive birthday cakes for all ages. Choose from our signature designs or work with us to create something completely unique for your loved one.",
-            icon: "✦",
-            price: "Starting at £145"
-        },
-        {
-            id: "cupcakes",
-            title: "Gourmet Cupcakes",
-            description: "Individual treats perfect for any occasion. Available in dozens of flavors with buttercream, cream cheese, or chocolate ganache frosting.",
-            icon: "◉",
-            price: "Starting at £10 each"
-        },
-        {
-            id: "custom-cakes",
-            title: "Custom Cakes",
-            description: "Specialty desserts including cake pops, macarons, cookies, and seasonal treats. Perfect for corporate events, parties, and gift giving.",
-            icon: "❋",
-            price: "Custom pricing"
-        },
-        {
-            id: "pastries",
-            title: "Fresh Pastries",
-            description: "Daily fresh croissants, danishes, muffins, and artisan breads. Made with European techniques and the finest local ingredients.",
-            icon: "✧",
-            price: "Starting at £10.50"
-        },
-        {
-            id: "corporate-catering",
-            title: "Corporate Catering",
-            description: "Professional dessert catering for office meetings, corporate events, and business celebrations. Includes delivery and setup services.",
+            description: "Elegant, multi-tiered masterpieces designed to be the breathtaking centerpiece of your special day.",
             icon: "◈",
-            price: "Custom packages"
+            price: "From $300"
+        },
+        {
+            id: "custom-birthday",
+            title: "Custom Birthday Cakes",
+            description: "Fun, themed, and incredibly delicious cakes tailored to the birthday person's unique personality and taste.",
+            icon: "✦",
+            price: "From $85"
+        },
+        {
+            id: "cupcakes-pastries",
+            title: "Cupcakes & Pastries",
+            description: "Perfectly portioned treats in a variety of flavors, great for parties, office events, or a sweet afternoon pick-me-up.",
+            icon: "◉",
+            price: "From $35/dz"
+        },
+        {
+            id: "dessert-tables",
+            title: "Dessert Tables",
+            description: "A beautifully curated selection of miniature desserts, cake pops, cookies, and treats for your guests.",
+            icon: "❋",
+            price: "Custom Pricing"
+        },
+        {
+            id: "corporate-events",
+            title: "Corporate Events",
+            description: "Branded cupcakes, large sheet cakes, and professional desserts perfect for company milestones.",
+            icon: "✧",
+            price: "Custom Pricing"
+        },
+        {
+            id: "tasting-boxes",
+            title: "Tasting Boxes",
+            description: "Sample our most popular cake and frosting combinations before committing to your final event order.",
+            icon: "♡",
+            price: "$25/box"
         }
     ],
     social: [
         {
             platform: "Instagram",
-            url: "https://instagram.com/cakes2haven2eat",
+            url: "https://instagram.com/sweetmomentsbakery",
             icon: "instagram"
         },
         {
             platform: "Facebook",
-            url: "https://facebook.com/cakes2haven2eat",
+            url: "https://facebook.com/sweetmomentsbakery",
             icon: "facebook"
         },
         {
             platform: "Pinterest",
-            url: "https://pinterest.com/cakes2haven2eat",
+            url: "https://pinterest.com/sweetmomentsbakery",
             icon: "pinterest"
         },
         {
             platform: "TikTok",
-            url: "https://tiktok.com/@cakes2haven2eat",
+            url: "https://tiktok.com/@sweetmomentsbakery",
             icon: "tiktok"
         }
     ],
     colors: {
-        primary: "#E11D48", // Rose/Pink - represents sweetness, cakes, frosting
-        secondary: "#92400E", // Warm brown - represents chocolate, warmth, comfort
-        primaryLight: "#FDF2F8", // Very light pink
-        secondaryLight: "#FEF3C7", // Light cream/yellow
-        primaryDark: "#881337", // Dark rose
-        secondaryDark: "#451A03" // Dark brown
+        primary: "#E11D48",
+        secondary: "#92400E",
+        primaryLight: "#FDF2F8",
+        secondaryLight: "#FEF3C7",
+        primaryDark: "#881337",
+        secondaryDark: "#451A03"
     },
-    // Gallery categories - images will be loaded dynamically from Cloudinary by tags
+    // Gallery categories - images are loaded dynamically from Cloudinary by tags
     galleryCategories: [
         'wedding',
         'birthday',

@@ -7,7 +7,7 @@ import { Footer } from '@/components/Footer';
 
 export default function HomePage(): JSX.Element {
     return (
-        <main className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-amber-50">
+        <main className="min-h-screen bg-neutral-50">
             <Navbar />
             <Hero />
             <Services />

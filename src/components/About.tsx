@@ -14,7 +14,7 @@ export function About(): JSX.Element {
                     {/* Section Title */}
                     <div className="animate-fadeInUp">
                         <h2 className="font-script text-4xl sm:text-5xl lg:text-6xl font-bold text-rose-600 mb-6">
-                            About {cakeBusinessConfig.business.name}
+                            About the Template
                         </h2>
                     </div>
 
@@ -47,24 +47,24 @@ export function About(): JSX.Element {
                                     <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center shadow-lg">
                                         <span className="text-3xl text-white">♡</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Made with Love</h3>
-                                    <p className="text-gray-600 leading-relaxed">Every cake is handcrafted with passion, using time-honored recipes and the finest ingredients to create memorable experiences.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Built to Adapt</h3>
+                                    <p className="text-gray-600 leading-relaxed">Every section is designed so you can swap in your own brand, services, and calls to action without rebuilding the page.</p>
                                 </div>
 
                                 <div className="text-center animate-scaleIn" style={{animationDelay: '0.8s'}}>
                                     <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
                                         <span className="text-3xl text-white">✦</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Custom Creations</h3>
-                                    <p className="text-gray-600 leading-relaxed">Personalized designs tailored to your vision, ensuring every celebration is as unique as you are.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Reusable Structure</h3>
+                                    <p className="text-gray-600 leading-relaxed">Navigation, hero content, and supporting sections all pull from shared data so updates stay fast and consistent.</p>
                                 </div>
 
                                 <div className="text-center animate-scaleIn" style={{animationDelay: '1s'}}>
                                     <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-rose-500 to-amber-500 rounded-full flex items-center justify-center shadow-lg">
                                         <span className="text-3xl text-white">✧</span>
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Fresh Daily</h3>
-                                    <p className="text-gray-600 leading-relaxed">Baked fresh every morning using premium ingredients, ensuring the highest quality and taste in every bite.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-4">Launch Faster</h3>
+                                    <p className="text-gray-600 leading-relaxed">Use the template as a starting point, then refine the copy and imagery to match the brand you&apos;re building.</p>
                                 </div>
                             </div>
 
@@ -116,27 +116,27 @@ export function About(): JSX.Element {
 
                             <div className="relative">
                                 <h3 className="font-script text-3xl lg:text-4xl font-bold mb-4">
-                                    Sweet Memories Start Here
+                                    Good Websites Start Here
                                 </h3>
                                 <p className="text-xl mb-8 opacity-90">
-                                    Let us be part of your special moments. From intimate gatherings to grand celebrations, we create cakes that make memories sweeter.
+                                    This template gives you a clear starting point for a brand that wants to look credible, polished, and easy to understand.
                                 </p>
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                                     <div>
                                         <div className="text-2xl font-bold">500+</div>
-                                        <div className="text-sm opacity-80">Happy Customers</div>
+                                        <div className="text-sm opacity-80">Customizable Details</div>
                                     </div>
                                     <div>
                                         <div className="text-2xl font-bold">50+</div>
-                                        <div className="text-sm opacity-80">Cake Varieties</div>
+                                        <div className="text-sm opacity-80">Reusable Sections</div>
                                     </div>
                                     <div>
                                         <div className="text-2xl font-bold">5+</div>
-                                        <div className="text-sm opacity-80">Years Experience</div>
+                                        <div className="text-sm opacity-80">Core Pages</div>
                                     </div>
                                     <div>
                                         <div className="text-2xl font-bold">24h</div>
-                                        <div className="text-sm opacity-80">Fresh Guarantee</div>
+                                        <div className="text-sm opacity-80">Response Target</div>
                                     </div>
                                 </div>
                             </div>

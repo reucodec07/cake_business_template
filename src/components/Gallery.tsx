@@ -1,8 +1,7 @@
 'use client';
 
-import React, { JSX, useState, useEffect } from 'react';
+import React, {JSX, useState, useEffect} from 'react';
 import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
 
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import { getCategoryDisplayName } from '@/lib/cloudinary';
@@ -165,12 +164,12 @@ export function Gallery(): JSX.Element {
                     <div className="text-center mb-16 lg:mb-24">
                         <div className="animate-fadeInUp">
                             <h2 className="font-script text-4xl sm:text-5xl lg:text-6xl font-bold text-rose-600 mb-6">
-                                Cake Gallery
+                                Portfolio
                             </h2>
                         </div>
                         <div className="animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
                             <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                                Take a peek at some of our favorite cake creations! Each one tells a story of celebration, joy, and sweet memories made.
+                                Browse a few examples of how this template can be adapted for different brands, offers, and content styles.
                             </p>
                         </div>
                     </div>
@@ -198,7 +197,7 @@ export function Gallery(): JSX.Element {
                         <div className="flex justify-center items-center py-20">
                             <div className="text-center">
                                 <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-rose-500 mb-4"></div>
-                                <p className="text-gray-600 text-lg">Loading our sweet creations...</p>
+                                <p className="text-gray-600 text-lg">Loading portfolio items...</p>
                             </div>
                         </div>
                     )}
@@ -222,15 +221,15 @@ export function Gallery(): JSX.Element {
                     {!loading && !error && filteredImages.length === 0 && (
                         <div className="text-center py-20">
                             <div className="text-gray-400 text-6xl mb-4">🎂</div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">No images found</h3>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-4">No items found</h3>
                             <p className="text-gray-600 mb-6">
-                                We haven&apos;t added any {selectedCategory === 'all' ? '' : getCategoryDisplayName(selectedCategory).toLowerCase()} images yet.
+                                We haven&apos;t added any {selectedCategory === 'all' ? '' : getCategoryDisplayName(selectedCategory).toLowerCase()} items yet.
                             </p>
                             <button
                                 onClick={() => setSelectedCategory('all')}
                                 className="px-6 py-3 bg-gradient-to-r from-rose-500 to-rose-600 text-white font-semibold rounded-full hover:from-rose-600 hover:to-rose-700 active:scale-95 transition-all duration-300"
                             >
-                                View All Categories
+                                View All Work
                             </button>
                         </div>
                     )}

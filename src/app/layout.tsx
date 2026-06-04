@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Dancing_Script, Inter } from 'next/font/google';
 import './globals.css';
+import 'yet-another-react-lightbox/styles.css';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import {JSX} from "react";
 
@@ -86,13 +87,13 @@ export default function RootLayout({
     return (
         <html lang="en" className={`scroll-smooth ${dancingScript.variable}`}>
         <head>
-            {/* Structured Data for Bakery Business */}
+            {/* Structured Data for the template site */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         '@context': 'https://schema.org',
-                        '@type': 'Bakery',
+                        '@type': 'ProfessionalService',
                         name: cakeBusinessConfig.business.name,
                         description: cakeBusinessConfig.business.description,
                         telephone: cakeBusinessConfig.business.phone,
@@ -105,22 +106,15 @@ export default function RootLayout({
                             addressRegion: cakeBusinessConfig.business.address.state,
                             postalCode: cakeBusinessConfig.business.address.zip,
                         },
-                        openingHours: [
-                            'Mo-Fr 07:00-19:00',
-                            'Sa 08:00-18:00',
-                            'Su 09:00-16:00'
-                        ],
+                        openingHours: ['Mo-Fr 09:00-17:30'],
                         priceRange: '$$',
-                        servesCuisine: ['Desserts', 'Bakery'],
-                        hasMenu: true,
-                        acceptsReservations: false,
-                        paymentAccepted: ['Cash', 'Credit Card', 'Debit Card'],
-                        currenciesAccepted: 'USD',
+                        paymentAccepted: ['Cash', 'Credit Card', 'Debit Card', 'Bank Transfer'],
+                        currenciesAccepted: 'GBP',
                         sameAs: cakeBusinessConfig.social.map(social => social.url),
                         makesOffer: cakeBusinessConfig.services.map(service => ({
                             '@type': 'Offer',
                             itemOffered: {
-                                '@type': 'Product',
+                                '@type': 'Service',
                                 name: service.title,
                                 description: service.description
                             }
@@ -141,7 +135,7 @@ export default function RootLayout({
             {/* Theme color for mobile browsers */}
             <meta name="theme-color" content={cakeBusinessConfig.colors.primary} />
         </head>
-        <body className={`${inter.className} antialiased bg-gradient-to-br from-rose-50 via-white to-amber-50`}>
+        <body className={`${inter.className} antialiased bg-neutral-50`}>
         {children}
         </body>
         </html>

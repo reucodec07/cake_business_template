@@ -9,12 +9,12 @@ import Link from "next/link";
 
 // Metadata for the contact page
 export const metadata: Metadata = {
-    title: `Order Your Dream Cake - ${cakeBusinessConfig.business.name}`,
-    description: `Place your custom cake order with ${cakeBusinessConfig.business.name}. Wedding cakes, birthday cakes, cupcakes, and more. Fresh ingredients, custom designs, local delivery available.`,
-    keywords: `order cake ${cakeBusinessConfig.business.name}, custom cake order, wedding cake order, birthday cake, ${cakeBusinessConfig.business.address.city} bakery, ${cakeBusinessConfig.business.phone}`,
+    title: `Contact ${cakeBusinessConfig.business.name} - Start Your Project`,
+    description: `Contact ${cakeBusinessConfig.business.name} to customize this template for your brand, service, or portfolio website.`,
+    keywords: `contact ${cakeBusinessConfig.business.name}, website template, project brief, ${cakeBusinessConfig.business.address.city}, custom website`,
     openGraph: {
-        title: `Order Your Dream Cake - ${cakeBusinessConfig.business.name}`,
-        description: `Place your custom cake order with ${cakeBusinessConfig.business.name}. Fresh ingredients, custom designs, local delivery available.`,
+        title: `Contact ${cakeBusinessConfig.business.name} - Start Your Project`,
+        description: `Use the contact page to brief the team on your brand, content, and launch goals.`,
     }
 };
 
@@ -45,7 +45,7 @@ export default function ContactPage(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
                     <div className="animate-fadeInUp">
                         <h1 className="font-script text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                            Order from {cakeBusinessConfig.business.name}
+                            Contact {cakeBusinessConfig.business.name}
                         </h1>
                     </div>
                     <div className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
@@ -88,17 +88,17 @@ export default function ContactPage(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="text-center mb-16">
                         <h2 className="font-script text-3xl sm:text-4xl font-bold text-rose-600 mb-4">
-                            Visit Our Sweet Bakery
+                            Visit Our Studio
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Experience the magic in person! Stop by our bakery to see, smell, and taste the difference of fresh-baked goodness.
+                            Visit us to talk through your goals, review the structure, and shape the template to match your brand.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Details */}
                         <div className="bg-gradient-to-br from-rose-50 to-amber-50 p-8 lg:p-12 rounded-3xl">
-                            <h3 className="font-script text-2xl font-bold text-rose-600 mb-8">Bakery Information</h3>
+                            <h3 className="font-script text-2xl font-bold text-rose-600 mb-8">Studio Information</h3>
 
                             <div className="space-y-8">
                                 {/* Address */}
@@ -128,7 +128,7 @@ export default function ContactPage(): JSX.Element {
                                         >
                                             {cakeBusinessConfig.business.phone}
                                         </a>
-                                        <p className="text-sm text-gray-500">Available during business hours</p>
+                                        <p className="text-sm text-gray-500">Available during office hours</p>
                                     </div>
                                 </div>
 
@@ -155,7 +155,7 @@ export default function ContactPage(): JSX.Element {
                         <div className="space-y-8">
                             {/* Business Hours */}
                             <div className="bg-white p-8 rounded-3xl shadow-lg border border-rose-100">
-                                <h3 className="font-script text-2xl font-bold text-amber-600 mb-6">Bakery Hours</h3>
+                                <h3 className="font-script text-2xl font-bold text-amber-600 mb-6">Office Hours</h3>
                                 <div className="space-y-3 text-gray-700">
                                     <div className="flex justify-between items-center">
                                         <span className="font-medium">Monday - Friday</span>
@@ -172,7 +172,7 @@ export default function ContactPage(): JSX.Element {
                                 </div>
                                 <div className="mt-6 p-4 bg-gradient-to-r from-rose-100 to-amber-100 rounded-xl">
                                     <p className="text-sm text-rose-700 font-medium text-center">
-                                        Fresh baking starts at 6 AM daily!
+                                        Book a call to get started!
                                     </p>
                                 </div>
                             </div>
@@ -181,7 +181,7 @@ export default function ContactPage(): JSX.Element {
                             <div className="bg-gradient-to-r from-rose-600 to-amber-600 p-8 rounded-3xl text-white">
                                 <h3 className="font-script text-2xl font-bold mb-4">Planning Ahead?</h3>
                                 <p className="mb-4">
-                                    For wedding cakes and large orders, we recommend placing your order at least 2-3 weeks in advance to ensure availability and perfect execution.
+                                    For larger websites or custom builds, we recommend reaching out early so we can plan the scope and timeline properly.
                                 </p>
                                 <Link
                                     href="/#services"
@@ -200,37 +200,37 @@ export default function ContactPage(): JSX.Element {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="font-script text-3xl sm:text-4xl font-bold text-rose-600 mb-4">
-                            Sweet Questions & Answers
+                            Questions & Answers
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Common questions about ordering from {cakeBusinessConfig.business.name}
+                            Common questions about working with {cakeBusinessConfig.business.name}
                         </p>
                     </div>
 
                     <div className="space-y-6">
                         <div className="bg-white p-8 rounded-2xl shadow-lg">
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">How far in advance should I order?</h3>
-                            <p className="text-gray-600">For custom cakes, we recommend 1-2 weeks notice. Wedding cakes require 3-4 weeks. However, we can often accommodate shorter notice for simpler designs.</p>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">How far in advance should I contact you?</h3>
+                            <p className="text-gray-600">For custom sites, a couple of weeks is ideal. Smaller updates can often be handled sooner depending on the scope.</p>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-lg">
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Do you offer delivery?</h3>
-                            <p className="text-gray-600">Yes! We offer local delivery within 15 miles for a small fee. We also provide setup service for wedding and event cakes to ensure they arrive perfect.</p>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">Do you help with setup?</h3>
+                            <p className="text-gray-600">Yes. We can help with launch-ready copy, layout tweaks, and basic content setup so the site feels ready to publish.</p>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-lg">
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">Can you accommodate dietary restrictions?</h3>
-                            <p className="text-gray-600">Absolutely! We offer gluten-free, dairy-free, sugar-free, and vegan options. Just let us know your needs when placing your order.</p>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">Can you adapt the template to my brand?</h3>
+                            <p className="text-gray-600">Absolutely. That is the main purpose of the template — swap in your voice, imagery, services, and contact details.</p>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-lg">
-                            <h3 className="text-lg font-bold text-gray-900 mb-3">What&#39;s included in a consultation?</h3>
-                            <p className="text-gray-600">Our free consultation includes design discussion, flavor tasting (for orders over $100), pricing, and timeline planning. We want your cake to be perfect!</p>
+                            <h3 className="text-lg font-bold text-gray-900 mb-3">What&apos;s included in a consultation?</h3>
+                            <p className="text-gray-600">A quick review of your goals, recommended page structure, and the best starting point for your content rewrite.</p>
                         </div>
 
                         <div className="bg-white p-8 rounded-2xl shadow-lg">
                             <h3 className="text-lg font-bold text-gray-900 mb-3">Do you require a deposit?</h3>
-                            <p className="text-gray-600">Yes, we require a 50% deposit to secure your order date, with the balance due at pickup or delivery. We accept cash, card, and digital payments.</p>
+                            <p className="text-gray-600">For custom work, yes. The exact amount can be agreed based on scope, timeline, and the amount of content to update.</p>
                         </div>
                     </div>
                 </div>

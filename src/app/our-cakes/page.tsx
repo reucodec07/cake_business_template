@@ -7,14 +7,14 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import Link from "next/link";
 
-// Metadata for the cakes page
+// Metadata for the portfolio page
 export const metadata: Metadata = {
-    title: `Our Cakes - ${cakeBusinessConfig.business.name} Gallery`,
-    description: `Browse our stunning collection of custom cakes, wedding cakes, birthday cakes, cupcakes, and specialty desserts at ${cakeBusinessConfig.business.name}. Fresh, handcrafted, and made with love.`,
-    keywords: `${cakeBusinessConfig.business.name} cakes, cake gallery, wedding cakes, birthday cakes, custom cakes, cupcakes, ${cakeBusinessConfig.business.address.city} bakery gallery`,
+    title: `Portfolio - ${cakeBusinessConfig.business.name}`,
+    description: `Browse examples of how ${cakeBusinessConfig.business.name} can be adapted for different brands, services, and launch goals.`,
+    keywords: `${cakeBusinessConfig.business.name} portfolio, website template, reusable sections, ${cakeBusinessConfig.business.address.city}, flexible design`,
     openGraph: {
-        title: `Our Sweet Creations - ${cakeBusinessConfig.business.name}`,
-        description: `Explore our gallery of beautiful custom cakes, from elegant weddings to fun birthdays. See why ${cakeBusinessConfig.business.name} is the premier choice for celebrations.`,
+        title: `Portfolio - ${cakeBusinessConfig.business.name}`,
+        description: `Explore how the template can be customized for different use cases and brand styles.`,
     }
 };
 
@@ -29,7 +29,7 @@ export default function OurCakesPage(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <Breadcrumbs
                         items={[
-                            { label: "Our Cakes" }
+                            { label: "Portfolio" }
                         ]}
                     />
                 </div>
@@ -46,17 +46,17 @@ export default function OurCakesPage(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
                     <div className="animate-fadeInUp">
                         <h1 className="font-script text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-                            Our Sweet Creations
+                            Portfolio
                         </h1>
                     </div>
                     <div className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
                         <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-                            Every cake tells a story, every bite creates a memory
+                            Every template tells a story, every edit makes it more yours
                         </p>
                     </div>
                     <div className="animate-fadeInUp" style={{animationDelay: '0.4s'}}>
                         <p className="text-lg text-white/80 max-w-4xl mx-auto mb-8">
-                            Browse our gallery of handcrafted cakes, from elegant weddings to joyful birthdays. Each creation is made fresh with premium ingredients and endless love.
+                            Browse a few examples of how the layout can be shaped for services, launches, and portfolio-style content.
                         </p>
                     </div>
                     <div className="animate-fadeInUp flex flex-col sm:flex-row gap-4 justify-center items-center" style={{animationDelay: '0.6s'}}>
@@ -64,7 +64,7 @@ export default function OurCakesPage(): JSX.Element {
                             href="/contact"
                             className="bg-white text-rose-600 px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
-                            Order Your Dream Cake
+                            Start Your Project
                         </Link>
                         <a
                             href={`tel:${cakeBusinessConfig.business.phone}`}
@@ -83,32 +83,32 @@ export default function OurCakesPage(): JSX.Element {
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="animate-fadeInUp">
                             <h2 className="font-script text-3xl sm:text-4xl font-bold text-rose-600 mb-6">
-                                Crafted with Passion, Served with Pride
+                                Crafted with Flexibility, Shaped for Launch
                             </h2>
                         </div>
                         <div className="animate-fadeInUp" style={{animationDelay: '0.2s'}}>
                             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                                At {cakeBusinessConfig.business.name}, every cake is a work of art. From the first sketch to the final decoration,
-                                we pour our hearts into creating something truly special for your celebration. Browse our gallery to see the magic we can create for you.
+                                At {cakeBusinessConfig.business.name}, every page is a starting point. From the first idea to the final polish,
+                                we focus on making the template easy to edit, easy to launch, and easy to trust.
                             </p>
                         </div>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp" style={{animationDelay: '0.4s'}}>
                             <div className="text-center p-4 bg-gradient-to-br from-rose-50 to-amber-50 rounded-xl">
                                 <div className="text-2xl font-bold text-rose-600">500+</div>
-                                <div className="text-sm text-gray-600">Happy Customers</div>
+                                <div className="text-sm text-gray-600">Editable Details</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-rose-50 rounded-xl">
                                 <div className="text-2xl font-bold text-amber-600">1000+</div>
-                                <div className="text-sm text-gray-600">Cakes Created</div>
+                                <div className="text-sm text-gray-600">Reusable Sections</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-rose-50 to-amber-50 rounded-xl">
                                 <div className="text-2xl font-bold text-rose-600">50+</div>
-                                <div className="text-sm text-gray-600">Unique Flavors</div>
+                                <div className="text-sm text-gray-600">Layout Variations</div>
                             </div>
                             <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-rose-50 rounded-xl">
                                 <div className="text-2xl font-bold text-amber-600">5</div>
-                                <div className="text-sm text-gray-600">Years Experience</div>
+                                <div className="text-sm text-gray-600">Core Pages</div>
                             </div>
                         </div>
                     </div>
@@ -123,10 +123,10 @@ export default function OurCakesPage(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="font-script text-3xl sm:text-4xl font-bold text-rose-600 mb-4">
-                            Our Specialties
+                            Template Highlights
                         </h2>
                         <p className="text-lg text-gray-600">
-                            What makes our cakes truly special
+                            A few of the reusable parts that make this starter easy to adapt
                         </p>
                     </div>
 
@@ -141,7 +141,7 @@ export default function OurCakesPage(): JSX.Element {
                                     <span className="text-white text-xl">♡</span>
                                 </div>
                                 <h3 className="font-semibold text-gray-900 mb-2">{specialty}</h3>
-                                <p className="text-sm text-gray-600">Custom designed and crafted with care</p>
+                                <p className="text-sm text-gray-600">Easy to swap and reuse across the site</p>
                             </div>
                         ))}
                     </div>
@@ -153,10 +153,10 @@ export default function OurCakesPage(): JSX.Element {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="font-script text-3xl sm:text-4xl font-bold text-rose-600 mb-4">
-                            From Dream to Delicious
+                            From Draft to Launch
                         </h2>
                         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Our simple process ensures your perfect cake, from initial consultation to the final sweet bite
+                            A simple process makes it easy to move from a rough idea to a site that feels ready to share
                         </p>
                     </div>
 
@@ -166,7 +166,7 @@ export default function OurCakesPage(): JSX.Element {
                                 <span className="text-white font-bold">1</span>
                             </div>
                             <h3 className="font-bold text-gray-900 mb-2">Consultation</h3>
-                            <p className="text-sm text-gray-600">We discuss your vision, flavors, and design preferences</p>
+                            <p className="text-sm text-gray-600">We discuss your goals, audience, and content needs</p>
                         </div>
 
                         <div className="text-center">
@@ -174,7 +174,7 @@ export default function OurCakesPage(): JSX.Element {
                                 <span className="text-white font-bold">2</span>
                             </div>
                             <h3 className="font-bold text-gray-900 mb-2">Design</h3>
-                            <p className="text-sm text-gray-600">Our artists create a custom design just for you</p>
+                            <p className="text-sm text-gray-600">We shape the layout and messaging around your brand</p>
                         </div>
 
                         <div className="text-center">
@@ -182,7 +182,7 @@ export default function OurCakesPage(): JSX.Element {
                                 <span className="text-white font-bold">3</span>
                             </div>
                             <h3 className="font-bold text-gray-900 mb-2">Crafting</h3>
-                            <p className="text-sm text-gray-600">We bake and decorate with premium ingredients and care</p>
+                            <p className="text-sm text-gray-600">We refine the copy, links, and supporting details</p>
                         </div>
 
                         <div className="text-center">
@@ -190,7 +190,7 @@ export default function OurCakesPage(): JSX.Element {
                                 <span className="text-white font-bold">4</span>
                             </div>
                             <h3 className="font-bold text-gray-900 mb-2">Celebration</h3>
-                            <p className="text-sm text-gray-600">Your perfect cake is ready to make memories!</p>
+                            <p className="text-sm text-gray-600">Your template is ready to launch and grow with you</p>
                         </div>
                     </div>
 
@@ -199,7 +199,7 @@ export default function OurCakesPage(): JSX.Element {
                             href="/contact"
                             className="inline-block bg-gradient-to-r from-rose-500 to-rose-600 text-white px-8 py-4 rounded-full font-bold hover:from-rose-600 hover:to-rose-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
-                            Start Your Custom Cake Journey
+                            Start Your Custom Project
                         </Link>
                     </div>
                 </div>

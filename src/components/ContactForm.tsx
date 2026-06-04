@@ -113,18 +113,18 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
     };
 
     const eventTypes = [
-        'Wedding', 'Birthday', 'Anniversary', 'Baby Shower', 'Graduation',
-        'Corporate Event', 'Holiday Party', 'Other'
+        'Wedding', 'Birthday', 'Baby Shower', 'Anniversary',
+        'Corporate Event', 'Graduation', 'Holiday Party', 'Other'
     ];
 
     const cakeTypes = [
-        'Multi-tier Wedding Cake', 'Single Layer Cake', 'Cupcakes',
-        'Sheet Cake', 'Custom Shaped Cake', 'Dessert Table', 'Other'
+        'Multi-tiered Cake', 'Single Tier Cake', 'Sheet Cake',
+        'Cupcakes', 'Cake Pops', 'Custom Design', 'Other'
     ];
 
     const flavorOptions = [
-        'Vanilla', 'Chocolate', 'Red Velvet', 'Strawberry', 'Lemon',
-        'Carrot', 'Funfetti', 'Cookies & Cream', 'Custom Flavor'
+        'Vanilla Bean', 'Chocolate Fudge', 'Red Velvet', 'Lemon Raspberry',
+        'Salted Caramel', 'Carrot Cake', 'Strawberry', 'Custom Flavor'
     ];
 
     const budgetRanges = [
@@ -141,10 +141,10 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
             <div className="relative">
                 <div className="mb-8 text-center">
                     <h2 className="font-script text-3xl lg:text-4xl font-bold text-rose-600 mb-4">
-                        Order Your Dream Cake
+                        Start Your Cake Order
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Tell us about your special celebration and we&apos;ll create the perfect cake to make it unforgettable. We respond to all inquiries within 24 hours.
+                        Tell us about your upcoming event and we&apos;ll help design the perfect sweet treat for your celebration. We respond to all inquiries within 24 hours.
                     </p>
                 </div>
 
@@ -154,10 +154,10 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                         <div className="text-center">
                             <div className="text-4xl mb-2">🎉</div>
                             <p className="text-green-800 font-bold text-lg mb-2">
-                                Thank you for your cake order inquiry!
+                            Thank you for your cake inquiry!
                             </p>
                             <p className="text-green-700">
-                                We&apos;ve received your request and will contact you within 24 hours to discuss your dream cake. Get ready to make your celebration extra sweet!
+                            We&apos;ve received your request and will contact you within 24 hours to discuss next steps.
                             </p>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                                 Oops! Something went wrong
                             </p>
                             <p className="text-red-700">
-                                We couldn&apos;t submit your order. Please try again or call us directly at {cakeBusinessConfig.business.phone}
+                            We couldn&apos;t submit your request. Please try again or call us directly at {cakeBusinessConfig.business.phone}
                             </p>
                         </div>
                     </div>
@@ -233,9 +233,8 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                         </div>
                     </div>
 
-                    {/* Event Details */}
                     <div className="bg-gradient-to-r from-amber-50 to-rose-50 rounded-2xl p-6">
-                        <h3 className="font-script text-2xl font-bold text-amber-600 mb-6">Event Details</h3>
+                        <h3 className="font-script text-2xl font-bold text-amber-600 mb-6">Project Details</h3>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -275,7 +274,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
 
                             <div className="md:col-span-2">
                                 <label htmlFor="guestCount" className="block text-sm font-bold text-gray-700 mb-2">
-                                    Number of Guests *
+                                    Guest Count *
                                 </label>
                                 <input
                                     type="number"
@@ -286,13 +285,12 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                                     value={formData.guestCount}
                                     onChange={handleInputChange}
                                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-colors"
-                                    placeholder="How many people will be celebrating?"
+                                    placeholder="How many guests are you expecting?"
                                 />
                             </div>
                         </div>
                     </div>
 
-                    {/* Cake Preferences */}
                     <div className="bg-gradient-to-r from-rose-50 to-amber-50 rounded-2xl p-6">
                         <h3 className="font-script text-2xl font-bold text-rose-600 mb-6">Cake Preferences</h3>
 
@@ -363,7 +361,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                                     className="w-5 h-5 text-rose-600 bg-gray-100 border-2 border-gray-300 rounded focus:ring-rose-500 focus:ring-2"
                                 />
                                 <label htmlFor="deliveryNeeded" className="ml-3 text-sm font-bold text-gray-700">
-                                    I need delivery service
+                                    I need delivery
                                 </label>
                             </div>
                         </div>
@@ -372,7 +370,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                     {/* Special Requests */}
                     <div>
                         <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">
-                            Special Requests & Design Ideas *
+                            Cake Details & Notes *
                         </label>
                         <textarea
                             id="message"
@@ -382,14 +380,14 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                             value={formData.message}
                             onChange={handleInputChange}
                             className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-colors resize-vertical"
-                            placeholder="Tell us about your vision! Include details about colors, themes, decorations, dietary restrictions, or anything else that will help us create your perfect cake..."
+                            placeholder="Tell us about your theme, design ideas, allergy restrictions, or any other details..."
                         />
                     </div>
 
                     {/* Inspiration Images Upload */}
                     <div>
                         <label htmlFor="fileUpload" className="block text-sm font-bold text-gray-700 mb-2">
-                            Inspiration Images (Optional)
+                            Reference Files (Optional)
                         </label>
                         <div className="border-2 border-dashed border-rose-300 rounded-xl p-8 hover:border-rose-500 transition-colors bg-gradient-to-br from-rose-50/50 to-amber-50/50">
                             <input
@@ -403,10 +401,10 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                             <label htmlFor="fileUpload" className="cursor-pointer">
                                 <div className="text-center">
                                     <p className="text-lg font-semibold text-rose-600 mb-2">
-                                        Upload Inspiration Images
+                                        Upload Reference Files
                                     </p>
                                     <p className="text-gray-600">
-                                        Share photos of cakes you love or design ideas that inspire you
+                                        Share screenshots, mood boards, or example sites that help explain what you want
                                     </p>
                                     <p className="text-xs text-gray-500 mt-2">PNG, JPG, GIF up to 5MB each</p>
                                 </div>
@@ -416,7 +414,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                         {/* File Preview */}
                         {uploadedFiles.length > 0 && (
                             <div className="mt-6">
-                                <h4 className="text-sm font-bold text-gray-700 mb-3">Uploaded Images:</h4>
+                                <h4 className="text-sm font-bold text-gray-700 mb-3">Uploaded Files:</h4>
                                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                                     {uploadedFiles.map((file, index) => (
                                         <div key={index} className="relative group">
@@ -452,10 +450,10 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                             {isSubmitting ? (
                                 <>
                                     <span className="inline-block animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></span>
-                                    Creating Your Order...
+                                    Creating Your Request...
                                 </>
                             ) : (
-                                'Submit Cake Order'
+                                'Submit Cake Request'
                             )}
                         </button>
 

@@ -1,53 +1,56 @@
 'use client';
 
-import React, {JSX, useState, useEffect} from 'react';
+import React, {JSX, useState} from 'react';
 import Link from 'next/link';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
-import { usePathname } from 'next/navigation';
 import Image from "next/image";
 
 export function Navbar(): JSX.Element {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const pathname = usePathname();
-    const isHome = pathname === '/';
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            setIsScrolled(scrollPosition > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    const navbarBg = isHome
-        ? (isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent')
-        : 'bg-white/95 backdrop-blur-md shadow-lg';
-
-    const logoTextColor = isHome
-        ? (isScrolled ? 'text-rose-600 hover:text-rose-700' : 'text-white hover:text-rose-200')
-        : 'text-rose-600 hover:text-rose-700';
-
-    const linkTextColor = isHome
-        ? (isScrolled ? 'text-gray-700 hover:text-rose-600' : 'text-white hover:text-rose-200')
-        : 'text-gray-700 hover:text-rose-600';
-
-    const underlineColor = isHome
-        ? (isScrolled ? 'bg-rose-600' : 'bg-rose-200')
-        : 'bg-rose-600';
-
-    const phoneButton = isHome
-        ? (isScrolled
-            ? 'bg-gradient-to-r from-rose-500 to-rose-600 text-white hover:from-rose-600 hover:to-rose-700'
-            : 'bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30')
-        : 'bg-gradient-to-r from-rose-500 to-rose-600 text-white hover:from-rose-600 hover:to-rose-700';
+    const logoTextColor = 'text-[#FFF8DC] hover:text-white drop-shadow-md';
+    const linkTextColor = 'text-[#FFE4C4] hover:text-white drop-shadow-md';
+    const underlineColor = 'bg-[#DEB887]';
+    const phoneButton = 'bg-gradient-to-r from-[#D2691E] to-[#8B4513] text-white hover:from-[#CD853F] hover:to-[#A0522D] border border-[#DEB887]/30 shadow-inner';
 
     return (
-        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navbarBg}`}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
+        <nav className="fixed top-2 sm:top-4 left-2 right-2 sm:left-4 sm:right-4 md:left-1/2 md:right-auto md:-translate-x-1/2 md:w-[95%] md:max-w-6xl z-50">
+            
+            {/* The Spoon Background SVG */}
+            <svg 
+                className="absolute inset-0 w-full h-full drop-shadow-2xl z-[-1]" 
+                viewBox="0 0 1000 100" 
+                preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <defs>
+                    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#8B5A2B" />
+                        <stop offset="50%" stopColor="#A0522D" />
+                        <stop offset="100%" stopColor="#5C3317" />
+                    </linearGradient>
+                    <linearGradient id="woodHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="rgba(255,255,255,0.3)" />
+                        <stop offset="20%" stopColor="rgba(255,255,255,0.1)" />
+                        <stop offset="80%" stopColor="rgba(0,0,0,0.1)" />
+                        <stop offset="100%" stopColor="rgba(0,0,0,0.5)" />
+                    </linearGradient>
+                </defs>
+                
+                {/* Main Spoon Body */}
+                <path d="M 150 0 C 250 0, 280 15, 310 15 L 950 15 C 990 15, 995 30, 995 50 C 995 70, 990 85, 950 85 L 310 85 C 280 85, 250 100, 150 100 C 30 100, 5 50, 5 50 C 5 50, 30 0, 150 0 Z" fill="url(#woodGradient)" />
+                <path d="M 150 0 C 250 0, 280 15, 310 15 L 950 15 C 990 15, 995 30, 995 50 C 995 70, 990 85, 950 85 L 310 85 C 280 85, 250 100, 150 100 C 30 100, 5 50, 5 50 C 5 50, 30 0, 150 0 Z" fill="url(#woodHighlight)" />
+                
+                {/* Bowl Indentation */}
+                <path d="M 140 10 C 220 10, 250 25, 250 50 C 250 75, 220 90, 140 90 C 50 90, 25 50, 25 50 C 25 50, 50 10, 140 10 Z" fill="rgba(0,0,0,0.15)" stroke="rgba(255,255,255,0.1)" strokeWidth="2" />
+                
+                {/* Handle Detail Line (Grain/Groove) */}
+                <path d="M 350 50 L 900 50" stroke="rgba(0,0,0,0.15)" strokeWidth="4" strokeLinecap="round" />
+                <path d="M 350 52 L 900 52" stroke="rgba(255,255,255,0.1)" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+
+            {/* Content Container */}
+            <div className="relative z-10 flex justify-between items-center h-[90px] sm:h-[100px] px-6 md:pl-10 md:pr-8">
                     {/* Logo and Text */}
                     <div className="flex items-center space-x-2 animate-slideInLeft">
                         <Image
@@ -120,19 +123,18 @@ export function Navbar(): JSX.Element {
                         </button>
                     </div>
                 </div>
-            </div>
 
             {/* Mobile Menu Content */}
-            <div className={`md:hidden transition-all duration-500 ease-in-out ${
+            <div className={`md:hidden absolute top-full mt-4 w-full transition-all duration-500 ease-in-out ${
                 isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
             }`}>
-                <div className="bg-white/95 backdrop-blur-md border-t border-rose-100">
+                <div className="bg-[#8B5A2B]/95 backdrop-blur-md border border-[#5C3317] shadow-xl rounded-2xl mx-auto w-[98%]">
                     <div className="px-4 py-4 space-y-2">
                         {cakeBusinessConfig.navigation.map((item, index) => (
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className={`block px-4 py-3 text-base font-medium text-gray-700 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-all duration-300 transform hover:scale-105 animate-slideInLeft`}
+                                className={`block px-4 py-3 text-base font-medium text-[#FFF8DC] hover:text-white hover:bg-[#A0522D]/50 rounded-lg transition-all duration-300 transform hover:scale-105 animate-slideInLeft`}
                                 style={{ animationDelay: `${index * 0.1}s` }}
                                 onClick={() => setIsMenuOpen(false)}
                             >
@@ -142,7 +144,7 @@ export function Navbar(): JSX.Element {
                         <div className="px-4 py-2 animate-slideInLeft" style={{ animationDelay: '0.4s' }}>
                             <a
                                 href={`tel:${cakeBusinessConfig.business.phone}`}
-                                className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold rounded-full hover:from-rose-600 hover:to-rose-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                                className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-[#D2691E] to-[#8B4513] text-white text-sm font-semibold rounded-full hover:from-[#CD853F] hover:to-[#A0522D] transition-all duration-300 shadow-lg border border-[#DEB887]/30 transform hover:scale-105"
                             >
                                 <span className="mr-2">✆</span>
                                 Call {cakeBusinessConfig.business.phone}
