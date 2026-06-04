@@ -68,4 +68,4 @@ Most of the site's content can be customized by editing `src/lib/cake-business-c
 This project is open-source and available under the MIT License.
 
 ---
-Built with ❤️ for Sweet Moments Bakery.
+Built with ❤️ by [Setapartpixel.design](https://setapartpixel.design) for Sweet Moments Bakery.

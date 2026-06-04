@@ -218,16 +218,39 @@ export function Footer(): JSX.Element {
                     </div>
                 </div>
 
-                {/* Copyright */}
+                {/* Copyright & Credit */}
                 <div className="border-t border-white/20 mt-12 pt-8 animate-fadeInUp" style={{animationDelay: '1s'}}>
-                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                        <p className="text-gray-400 text-center md:text-left">
-                            © {currentYear} {cakeBusinessConfig.business.name}. All rights reserved. Made with ♡ for every celebration.
-                        </p>
-                        <div className="flex space-x-6 text-sm">
-                            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link>
-                            <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</Link>
-                            <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</Link>
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                        <div className="text-center md:text-left">
+                            <p className="text-gray-400">
+                                © {currentYear} {cakeBusinessConfig.business.name}. All rights reserved.
+                            </p>
+                            <div className="flex space-x-6 text-sm mt-2">
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</Link>
+                                <Link href="#" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</Link>
+                                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">Contact Us</Link>
+                            </div>
+                        </div>
+
+                        {/* Setapartpixel Credit & Logo */}
+                        <div className="flex flex-col items-center md:items-end space-y-3">
+                            <a 
+                                href="https://setapartpixel.design" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="group flex flex-col items-center md:items-end"
+                            >
+                                <span className="text-gray-400 text-sm mb-2 group-hover:text-rose-300 transition-colors duration-300">
+                                    Built with ❤️ by Setapartpixel.design
+                                </span>
+                                <div className="bg-white/10 p-2 rounded-lg backdrop-blur-sm border border-white/10 group-hover:bg-white/20 transition-all duration-300">
+                                    <img 
+                                        src="/setapartpixel-logo.gif" 
+                                        alt="Setapartpixel.design Logo" 
+                                        className="h-10 w-auto"
+                                    />
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
