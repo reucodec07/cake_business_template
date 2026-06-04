@@ -59,7 +59,7 @@ This template is designed to be adapted quickly. Open `src/lib/cake-business-con
 - **Social Media:** Simply paste your URLs to update all social icons in the footer.
 - **Branding Colors:** Update the primary and secondary hex codes to match your brand.
 
-## Tech Stack
+## 📦 Tech Stack
 
 - **Framework:** Next.js 15 (TypeScript)
 - **Styling:** Tailwind CSS
@@ -67,7 +67,22 @@ This template is designed to be adapted quickly. Open `src/lib/cake-business-con
 - **Gallery:** Cloudinary API & `yet-another-react-lightbox`
 - **Fonts:** Google Fonts (Dancing Script & Inter)
 
-## Contributing
+## 🌐 Deployment
+
+### Netlify (Recommended)
+This template is optimized for **Netlify**.
+1. Connect your GitHub repository to Netlify.
+2. Netlify will automatically detect the settings from `netlify.toml`.
+3. Add your [Environment Variables](#2-configure-environment) in the Netlify UI.
+4. Deploy!
+
+### Vercel
+1. Import the project into Vercel.
+2. Add your environment variables.
+3. Deploy!
+
+## 🤝 Contributing
+
 
 This is an open-source project! If you have ideas for new components (e.g., a "Testimonials" section or a "Booking Calendar"), feel free to:
 1. **Fork** the project.
