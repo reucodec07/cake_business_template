@@ -4,7 +4,10 @@ import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import {
     Instagram,
     Facebook,
-    Globe
+    Globe,
+    Phone,
+    Mail,
+    MapPin
 } from "lucide-react";
 
 const iconMap: Record<string, JSX.Element> = {
@@ -71,14 +74,14 @@ export function Footer(): JSX.Element {
                                 href={`tel:${cakeBusinessConfig.business.phone}`}
                                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-rose-500 to-rose-600 text-white rounded-full hover:from-rose-600 hover:to-rose-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
                             >
-                                <span className="mr-2 text-lg">✆</span>
+                                <Phone className="mr-2 w-5 h-5" />
                                 Book a Call
                             </a>
                             <a
                                 href={`mailto:${cakeBusinessConfig.business.email}`}
                                 className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-full hover:from-amber-600 hover:to-amber-700 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105"
                             >
-                                <span className="mr-2 text-lg">✉</span>
+                                <Mail className="mr-2 w-5 h-5" />
                                 Email Us
                             </a>
                         </div>
@@ -90,7 +93,7 @@ export function Footer(): JSX.Element {
                         <div className="space-y-4">
                             <div className="flex items-center space-x-3">
                                 <div className="w-8 h-8 bg-rose-500/20 rounded-full flex items-center justify-center">
-                                    <span className="text-rose-300">✆</span>
+                                    <Phone className="w-4 h-4 text-rose-300" />
                                 </div>
                                 <a
                                     href={`tel:${cakeBusinessConfig.business.phone}`}
@@ -102,7 +105,7 @@ export function Footer(): JSX.Element {
 
                             <div className="flex items-center space-x-3">
                                 <div className="w-8 h-8 bg-amber-500/20 rounded-full flex items-center justify-center">
-                                    <span className="text-amber-300">✉</span>
+                                    <Mail className="w-4 h-4 text-amber-300" />
                                 </div>
                                 <a
                                     href={`mailto:${cakeBusinessConfig.business.email}`}
@@ -114,7 +117,7 @@ export function Footer(): JSX.Element {
 
                             <div className="flex items-start space-x-3">
                                 <div className="w-8 h-8 bg-rose-500/20 rounded-full flex items-center justify-center mt-1">
-                                    <span className="text-rose-300">◉</span>
+                                    <MapPin className="w-4 h-4 text-rose-300" />
                                 </div>
                                 <address className="text-gray-300 not-italic leading-relaxed">
                                     {cakeBusinessConfig.business.address.street}<br />
@@ -241,7 +244,7 @@ export function Footer(): JSX.Element {
                                 className="group flex flex-col items-center md:items-end"
                             >
                                 <span className="text-gray-400 text-sm mb-2 group-hover:text-rose-300 transition-colors duration-300">
-                                    Built with ❤️ by Setapartpixel.design
+                                    Built by Setapartpixel.design
                                 </span>
                                 <div className="bg-white/10 p-2 rounded-lg backdrop-blur-sm border border-white/10 group-hover:bg-white/20 transition-all duration-300">
                                     <img 
@@ -258,7 +261,7 @@ export function Footer(): JSX.Element {
                 {/* Final tagline */}
                 <div className="text-center mt-8 animate-fadeInUp" style={{animationDelay: '1.2s'}}>
                     <p className="font-script text-lg text-rose-200 opacity-80">
-                        Built to be rewritten quickly, customized easily, and launched with confidence. ♡
+                        Built to be rewritten quickly, customized easily, and launched with confidence.
                     </p>
                 </div>
             </div>

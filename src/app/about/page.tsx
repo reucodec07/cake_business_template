@@ -6,6 +6,7 @@ import { About } from '@/components/About';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import Link from "next/link";
+import { Star, Heart, Circle, Sparkles } from 'lucide-react';
 
 // Metadata for the about page
 export const metadata: Metadata = {
@@ -105,15 +106,15 @@ export default function AboutPage(): JSX.Element {
                                     </p>
                                     <ul className="space-y-2 text-gray-700">
                                         <li className="flex items-center">
-                                            <span className="text-rose-500 mr-2">✦</span>
+                                            <Star className="text-rose-500 mr-2 w-4 h-4" />
                                             Shared content lives in one central config
                                         </li>
                                         <li className="flex items-center">
-                                            <span className="text-rose-500 mr-2">✦</span>
+                                            <Star className="text-rose-500 mr-2 w-4 h-4" />
                                             Sections are reusable across pages
                                         </li>
                                         <li className="flex items-center">
-                                            <span className="text-rose-500 mr-2">✦</span>
+                                            <Star className="text-rose-500 mr-2 w-4 h-4" />
                                             The site is ready for quick brand swaps
                                         </li>
                                     </ul>
@@ -164,7 +165,7 @@ export default function AboutPage(): JSX.Element {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div className="text-center bg-white p-6 rounded-2xl shadow-md">
                             <div className="w-16 h-16 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl text-white">♡</span>
+                                <Heart className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">Clarity First</h3>
                             <p className="text-gray-600 text-sm">Clear structure and direct messaging in every section</p>
@@ -172,7 +173,7 @@ export default function AboutPage(): JSX.Element {
 
                         <div className="text-center bg-white p-6 rounded-2xl shadow-md">
                             <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl text-white">✦</span>
+                                <Star className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">Creative Flexibility</h3>
                             <p className="text-gray-600 text-sm">A visual system that still leaves room for your own voice</p>
@@ -180,7 +181,7 @@ export default function AboutPage(): JSX.Element {
 
                         <div className="text-center bg-white p-6 rounded-2xl shadow-md">
                             <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl text-white">◉</span>
+                                <Circle className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">Personal Touch</h3>
                             <p className="text-gray-600 text-sm">Editable details that help the site feel like your own</p>
@@ -188,7 +189,7 @@ export default function AboutPage(): JSX.Element {
 
                         <div className="text-center bg-white p-6 rounded-2xl shadow-md">
                             <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl text-white">✧</span>
+                                <Sparkles className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-lg font-bold text-gray-900 mb-2">Ready to Use</h3>
                             <p className="text-gray-600 text-sm">Built to help you launch quickly with less setup</p>

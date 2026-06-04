@@ -3,6 +3,7 @@
 import React, {JSX, useState} from 'react';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import Image from "next/image";
+import { CheckCircle, AlertCircle, Phone, Mail, Clock, X } from 'lucide-react';
 
 interface CakeFormData {
     name: string;
@@ -152,7 +153,9 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                 {submitStatus === 'success' && (
                     <div className="mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl">
                         <div className="text-center">
-                            <div className="text-4xl mb-2">🎉</div>
+                            <div className="flex justify-center mb-2">
+                                <CheckCircle className="w-12 h-12 text-green-500" />
+                            </div>
                             <p className="text-green-800 font-bold text-lg mb-2">
                             Thank you for your cake inquiry!
                             </p>
@@ -166,7 +169,9 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                 {submitStatus === 'error' && (
                     <div className="mb-8 p-6 bg-red-50 border border-red-200 rounded-2xl">
                         <div className="text-center">
-                            <div className="text-4xl mb-2">😔</div>
+                            <div className="flex justify-center mb-2">
+                                <AlertCircle className="w-12 h-12 text-red-500" />
+                            </div>
                             <p className="text-red-800 font-bold text-lg mb-2">
                                 Oops! Something went wrong
                             </p>
@@ -430,7 +435,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                                                 onClick={() => removeFile(index)}
                                                 className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm hover:bg-red-600 opacity-0 group-hover:opacity-100 transition-opacity"
                                             >
-                                                ×
+                                                <X className="w-4 h-4" />
                                             </button>
                                             <p className="text-xs text-gray-500 mt-1 truncate">{file.name}</p>
                                         </div>
@@ -461,7 +466,7 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                             href={`tel:${cakeBusinessConfig.business.phone}`}
                             className="flex-1 bg-gradient-to-r from-amber-500 to-amber-600 text-white py-4 px-8 rounded-2xl font-bold text-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl transform hover:scale-105"
                         >
-                            <span className="mr-2">✆</span>
+                            <Phone className="mr-2 inline-block w-5 h-5" />
                             Call {cakeBusinessConfig.business.phone}
                         </a>
                     </div>
@@ -472,7 +477,9 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                     <h3 className="font-script text-2xl font-bold text-rose-600 mb-6 text-center">Need Help? We&apos;re Here!</h3>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center p-4 bg-gradient-to-br from-rose-50 to-amber-50 rounded-xl">
-                            <div className="text-3xl mb-3">✆</div>
+                            <div className="flex justify-center mb-3">
+                                <Phone className="w-8 h-8 text-rose-600" />
+                            </div>
                             <p className="font-bold text-gray-900 mb-1">Call Us</p>
                             <a href={`tel:${cakeBusinessConfig.business.phone}`} className="text-rose-600 hover:text-rose-700 font-semibold">
                                 {cakeBusinessConfig.business.phone}
@@ -481,7 +488,9 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                         </div>
 
                         <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-rose-50 rounded-xl">
-                            <div className="text-3xl mb-3">✉</div>
+                            <div className="flex justify-center mb-3">
+                                <Mail className="w-8 h-8 text-rose-600" />
+                            </div>
                             <p className="font-bold text-gray-900 mb-1">Email Us</p>
                             <a href={`mailto:${cakeBusinessConfig.business.email}`} className="text-rose-600 hover:text-rose-700 font-semibold text-sm">
                                 {cakeBusinessConfig.business.email}
@@ -490,7 +499,9 @@ export function ContactForm({ className = '' }: ContactFormProps): JSX.Element {
                         </div>
 
                         <div className="text-center p-4 bg-gradient-to-br from-rose-50 to-amber-50 rounded-xl">
-                            <div className="text-3xl mb-3">◐</div>
+                            <div className="flex justify-center mb-3">
+                                <Clock className="w-8 h-8 text-rose-600" />
+                            </div>
                             <p className="font-bold text-gray-900 mb-1">Response Time</p>
                             <p className="text-rose-600 font-semibold">Within 24 Hours</p>
                             <p className="text-xs text-gray-500 mt-1">Usually much sooner!</p>

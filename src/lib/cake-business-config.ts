@@ -90,42 +90,42 @@ export const cakeBusinessConfig: CakeBusinessConfig = {
             id: "wedding-cakes",
             title: "Wedding Cakes",
             description: "Elegant, multi-tiered masterpieces designed to be the breathtaking centerpiece of your special day.",
-            icon: "◈",
+            icon: "W",
             price: "From $300"
         },
         {
             id: "custom-birthday",
             title: "Custom Birthday Cakes",
             description: "Fun, themed, and incredibly delicious cakes tailored to the birthday person's unique personality and taste.",
-            icon: "✦",
+            icon: "B",
             price: "From $85"
         },
         {
             id: "cupcakes-pastries",
             title: "Cupcakes & Pastries",
             description: "Perfectly portioned treats in a variety of flavors, great for parties, office events, or a sweet afternoon pick-me-up.",
-            icon: "◉",
+            icon: "C",
             price: "From $35/dz"
         },
         {
             id: "dessert-tables",
             title: "Dessert Tables",
             description: "A beautifully curated selection of miniature desserts, cake pops, cookies, and treats for your guests.",
-            icon: "❋",
+            icon: "D",
             price: "Custom Pricing"
         },
         {
             id: "corporate-events",
             title: "Corporate Events",
             description: "Branded cupcakes, large sheet cakes, and professional desserts perfect for company milestones.",
-            icon: "✧",
+            icon: "E",
             price: "Custom Pricing"
         },
         {
             id: "tasting-boxes",
             title: "Tasting Boxes",
             description: "Sample our most popular cake and frosting combinations before committing to your final event order.",
-            icon: "♡",
+            icon: "T",
             price: "$25/box"
         }
     ],

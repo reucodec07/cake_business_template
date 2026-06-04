@@ -6,6 +6,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import Link from "next/link";
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 // Metadata for the contact page
 export const metadata: Metadata = {
@@ -56,16 +57,16 @@ export default function ContactPage(): JSX.Element {
                     <div className="animate-fadeInUp flex flex-col sm:flex-row gap-4 justify-center items-center" style={{animationDelay: '0.4s'}}>
                         <a
                             href={`tel:${cakeBusinessConfig.business.phone}`}
-                            className="bg-white text-rose-600 px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                            className="bg-white text-rose-600 px-8 py-3 rounded-full font-bold hover:bg-gray-50 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 inline-flex items-center"
                         >
-                            <span className="mr-2">✆</span>
+                            <Phone className="mr-2 w-5 h-5" />
                             Call {cakeBusinessConfig.business.phone}
                         </a>
                         <a
                             href={`mailto:${cakeBusinessConfig.business.email}`}
-                            className="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-rose-600 transition-colors duration-300 transform hover:scale-105"
+                            className="border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-rose-600 transition-colors duration-300 transform hover:scale-105 inline-flex items-center"
                         >
-                            <span className="mr-2">✉</span>
+                            <Mail className="mr-2 w-5 h-5" />
                             Email Us
                         </a>
                     </div>
@@ -104,7 +105,7 @@ export default function ContactPage(): JSX.Element {
                                 {/* Address */}
                                 <div className="flex items-start space-x-4">
                                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-rose-400 to-rose-600 rounded-2xl flex items-center justify-center">
-                                        <span className="text-xl text-white">◉</span>
+                                        <MapPin className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-gray-900 mb-2">Location</h4>
@@ -118,7 +119,7 @@ export default function ContactPage(): JSX.Element {
                                 {/* Phone */}
                                 <div className="flex items-start space-x-4">
                                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center">
-                                        <span className="text-xl text-white">✆</span>
+                                        <Phone className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-gray-900 mb-2">Phone</h4>
@@ -135,7 +136,7 @@ export default function ContactPage(): JSX.Element {
                                 {/* Email */}
                                 <div className="flex items-start space-x-4">
                                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-rose-500 to-amber-500 rounded-2xl flex items-center justify-center">
-                                        <span className="text-xl text-white">✉</span>
+                                        <Mail className="w-6 h-6 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-bold text-gray-900 mb-2">Email</h4>

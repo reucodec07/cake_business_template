@@ -1,20 +1,20 @@
-# 🎂 Sweet Moments Bakery - Professional Next.js Website Template
+# Sweet Moments Bakery - Professional Next.js Website Template
 
 A high-performance, SEO-optimized, and visually stunning website template built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. Designed specifically for artisanal bakeries, cake shops, and boutique studios, this template is built to be **cloned, configured, and launched in minutes.**
 
 ![Project Preview](https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
 
-## 🌟 Key Features
+## Key Features
 
-- **⚡ Next.js 15 App Router:** Leveraging the latest React features for speed and efficiency.
-- **🎨 Custom Artistic UI:** Unique design elements like the "Wooden Spoon" Navbar and scalloped frosting footer.
-- **🖼️ Cloudinary Integration:** A dynamic gallery that pulls images automatically via tags—no manual uploads to the repo required.
-- **📱 Ultra-Responsive:** Pixel-perfect layout from mobile phones to ultra-wide monitors.
-- **🔍 SEO & Social Ready:** Built-in Open Graph metadata, Twitter Cards, and JSON-LD Structured Data for local business search ranking.
-- **🚀 One-File Configuration:** Change the entire site's identity (name, colors, services, social links) in a single file.
-- **✨ Smooth Motion:** Purposeful animations using Tailwind and CSS transitions.
+- **Next.js 15 App Router:** Leveraging the latest React features for speed and efficiency.
+- **Custom Artistic UI:** Unique design elements like the "Wooden Spoon" Navbar and scalloped frosting footer.
+- **Cloudinary Integration:** A dynamic gallery that pulls images automatically via tags—no manual uploads to the repo required.
+- **Ultra-Responsive:** Pixel-perfect layout from mobile phones to ultra-wide monitors.
+- **SEO & Social Ready:** Built-in Open Graph metadata, Twitter Cards, and JSON-LD Structured Data for local business search ranking.
+- **One-File Configuration:** Change the entire site's identity (name, colors, services, social links) in a single file.
+- **Smooth Motion:** Purposeful animations using Tailwind and CSS transitions.
 
-## 🛠 Project Structure
+## Project Structure
 
 ```text
 ├── src/
@@ -26,7 +26,7 @@ A high-performance, SEO-optimized, and visually stunning website template built 
 └── package.json        # Project dependencies
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone & Install
 ```bash
@@ -49,7 +49,7 @@ npm run dev
 ```
 Visit `http://localhost:3000` to see your site!
 
-## ⚙️ Customization (The "One-File" Rule)
+## Customization (The "One-File" Rule)
 
 This template is designed to be adapted quickly. Open `src/lib/cake-business-config.ts` to update everything:
 
@@ -59,7 +59,7 @@ This template is designed to be adapted quickly. Open `src/lib/cake-business-con
 - **Social Media:** Simply paste your URLs to update all social icons in the footer.
 - **Branding Colors:** Update the primary and secondary hex codes to match your brand.
 
-## 📦 Tech Stack
+## Tech Stack
 
 - **Framework:** Next.js 15 (TypeScript)
 - **Styling:** Tailwind CSS
@@ -67,7 +67,7 @@ This template is designed to be adapted quickly. Open `src/lib/cake-business-con
 - **Gallery:** Cloudinary API & `yet-another-react-lightbox`
 - **Fonts:** Google Fonts (Dancing Script & Inter)
 
-## 🤝 Contributing
+## Contributing
 
 This is an open-source project! If you have ideas for new components (e.g., a "Testimonials" section or a "Booking Calendar"), feel free to:
 1. **Fork** the project.
@@ -75,9 +75,9 @@ This is an open-source project! If you have ideas for new components (e.g., a "T
 3. **Commit** your changes.
 4. Open a **Pull Request**.
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-Built with ❤️ by [Setapartpixel.design](https://setapartpixel.design) for Sweet Moments Bakery.
+Built by [Setapartpixel.design](https://setapartpixel.design) for Sweet Moments Bakery.

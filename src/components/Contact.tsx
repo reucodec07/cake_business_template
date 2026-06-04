@@ -1,6 +1,7 @@
 import React, {JSX} from 'react';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import { ContactForm } from '@/components/ContactForm';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export function Contact(): JSX.Element {
     return (
@@ -33,7 +34,7 @@ export function Contact(): JSX.Element {
                                 {/* Phone Contact */}
                                 <div className="flex items-start space-x-6 group mb-8">
                                     <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-rose-400 to-rose-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span className="text-2xl text-white">✆</span>
+                                        <Phone className="w-8 h-8 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-bold text-gray-900 mb-2">Call Us</h4>
@@ -50,7 +51,7 @@ export function Contact(): JSX.Element {
                                 {/* Email Contact */}
                                 <div className="flex items-start space-x-6 group mb-8">
                                     <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span className="text-2xl text-white">✉</span>
+                                        <Mail className="w-8 h-8 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-bold text-gray-900 mb-2">Email Us</h4>
@@ -67,7 +68,7 @@ export function Contact(): JSX.Element {
                                 {/* Address */}
                                 <div className="flex items-start space-x-6 group mb-8">
                                     <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-rose-500 to-amber-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span className="text-2xl text-white">◉</span>
+                                        <MapPin className="w-8 h-8 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-bold text-gray-900 mb-2">Visit Our Studio</h4>
@@ -82,7 +83,7 @@ export function Contact(): JSX.Element {
                                 {/* Business Hours */}
                                 <div className="flex items-start space-x-6 group">
                                     <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-amber-500 to-rose-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                                        <span className="text-2xl text-white">◐</span>
+                                        <Clock className="w-8 h-8 text-white" />
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-bold text-gray-900 mb-3">Office Hours</h4>

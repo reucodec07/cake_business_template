@@ -4,6 +4,7 @@ import React, {JSX, useState} from 'react';
 import Link from 'next/link';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import Image from "next/image";
+import { Phone } from 'lucide-react';
 
 export function Navbar(): JSX.Element {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -93,7 +94,7 @@ export function Navbar(): JSX.Element {
                             href={`tel:${cakeBusinessConfig.business.phone}`}
                             className={`inline-flex items-center px-6 py-3 text-sm font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl ${phoneButton}`}
                         >
-                            <span className="mr-2">✆</span>
+                            <Phone className="mr-2 w-4 h-4" />
                             {cakeBusinessConfig.business.phone}
                         </a>
                     </div>
@@ -146,7 +147,7 @@ export function Navbar(): JSX.Element {
                                 href={`tel:${cakeBusinessConfig.business.phone}`}
                                 className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-[#D2691E] to-[#8B4513] text-white text-sm font-semibold rounded-full hover:from-[#CD853F] hover:to-[#A0522D] transition-all duration-300 shadow-lg border border-[#DEB887]/30 transform hover:scale-105"
                             >
-                                <span className="mr-2">✆</span>
+                                <Phone className="mr-2 w-4 h-4" />
                                 Call {cakeBusinessConfig.business.phone}
                             </a>
                         </div>

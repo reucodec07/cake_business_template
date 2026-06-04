@@ -169,7 +169,7 @@ export async function fetchImagesByTags(tags: string[], maxResults: number = 20)
 
         const searchUrl = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/resources/search`;
 
-        // 🔐 Add Basic Authentication header
+        // Add Basic Authentication header
         const authHeader = Buffer
             .from(`${CLOUDINARY_API_KEY}:${CLOUDINARY_API_SECRET}`)
             .toString('base64');
@@ -183,8 +183,8 @@ export async function fetchImagesByTags(tags: string[], maxResults: number = 20)
             body: JSON.stringify({
                 expression,
                 max_results: maxResults,
-                sort_by: [{ created_at: 'desc' }],  // ✅ Fixed format
-                with_field: ['tags', 'context']     // ✅ Valid field
+                sort_by: [{ created_at: 'desc' }],  // Fixed format
+                with_field: ['tags', 'context']     // Valid field
             })
         });
 

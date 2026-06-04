@@ -1,5 +1,6 @@
 import React, {JSX} from 'react';
 import Link from 'next/link';
+import { Home } from 'lucide-react';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 
 interface BreadcrumbItem {
@@ -22,7 +23,7 @@ export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps): JSX.El
                         className="inline-flex items-center text-sm font-semibold text-gray-700 hover:text-rose-600 transition-colors duration-300 group"
                     >
                         <div className="w-5 h-5 mr-3 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <span className="text-white text-xs">♡</span>
+                            <Home className="text-white w-3 h-3" />
                         </div>
                         <span className="font-script text-lg">{cakeBusinessConfig.business.name}</span>
                     </Link>

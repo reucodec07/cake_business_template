@@ -1,6 +1,7 @@
 import React, {JSX} from 'react';
 import Link from 'next/link';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
+import { Heart, Star, Sparkles, Phone } from 'lucide-react';
 
 export function About(): JSX.Element {
     return (
@@ -45,7 +46,7 @@ export function About(): JSX.Element {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-16">
                                 <div className="text-center animate-scaleIn" style={{animationDelay: '0.6s'}}>
                                     <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-rose-400 to-rose-600 rounded-full flex items-center justify-center shadow-lg">
-                                        <span className="text-3xl text-white">♡</span>
+                                        <Heart className="w-10 h-10 text-white" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Built to Adapt</h3>
                                     <p className="text-gray-600 leading-relaxed">Every section is designed so you can swap in your own brand, services, and calls to action without rebuilding the page.</p>
@@ -53,7 +54,7 @@ export function About(): JSX.Element {
 
                                 <div className="text-center animate-scaleIn" style={{animationDelay: '0.8s'}}>
                                     <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-lg">
-                                        <span className="text-3xl text-white">✦</span>
+                                        <Star className="w-10 h-10 text-white" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Reusable Structure</h3>
                                     <p className="text-gray-600 leading-relaxed">Navigation, hero content, and supporting sections all pull from shared data so updates stay fast and consistent.</p>
@@ -61,7 +62,7 @@ export function About(): JSX.Element {
 
                                 <div className="text-center animate-scaleIn" style={{animationDelay: '1s'}}>
                                     <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-rose-500 to-amber-500 rounded-full flex items-center justify-center shadow-lg">
-                                        <span className="text-3xl text-white">✧</span>
+                                        <Sparkles className="w-10 h-10 text-white" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Launch Faster</h3>
                                     <p className="text-gray-600 leading-relaxed">Use the template as a starting point, then refine the copy and imagery to match the brand you&apos;re building.</p>
@@ -98,7 +99,7 @@ export function About(): JSX.Element {
                                         href={`tel:${cakeBusinessConfig.business.phone}`}
                                         className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-lg font-semibold rounded-full hover:from-amber-600 hover:to-amber-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                                     >
-                                        <span className="mr-2">✆</span>
+                                        <Phone className="mr-2 w-5 h-5" />
                                         Call Us Today
                                     </a>
                                 </div>

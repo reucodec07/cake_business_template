@@ -6,6 +6,7 @@ import Lightbox from 'yet-another-react-lightbox';
 import { cakeBusinessConfig } from '@/lib/cake-business-config';
 import { getCategoryDisplayName } from '@/lib/cloudinary';
 import Image from "next/image";
+import { Frown, Cake } from 'lucide-react';
 
 interface GalleryImage {
     id: string;
@@ -205,7 +206,9 @@ export function Gallery(): JSX.Element {
                     {/* Error */}
                     {error && !loading && (
                         <div className="text-center py-20">
-                            <div className="text-rose-500 text-6xl mb-4">😔</div>
+                            <div className="flex justify-center mb-4">
+                                <Frown className="w-16 h-16 text-rose-500" />
+                            </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h3>
                             <p className="text-gray-600 mb-6">{error}</p>
                             <button
@@ -220,7 +223,9 @@ export function Gallery(): JSX.Element {
                     {/* Empty */}
                     {!loading && !error && filteredImages.length === 0 && (
                         <div className="text-center py-20">
-                            <div className="text-gray-400 text-6xl mb-4">🎂</div>
+                            <div className="flex justify-center mb-4">
+                                <Cake className="w-16 h-16 text-gray-400" />
+                            </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">No items found</h3>
                             <p className="text-gray-600 mb-6">
                                 We haven&apos;t added any {selectedCategory === 'all' ? '' : getCategoryDisplayName(selectedCategory).toLowerCase()} items yet.
