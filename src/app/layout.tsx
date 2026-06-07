@@ -14,6 +14,7 @@ const dancingScript = Dancing_Script({
 
 // SEO Metadata - pulls from cake-business-config.ts
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
     title: `${cakeBusinessConfig.business.name} - ${cakeBusinessConfig.business.tagline}`,
     description: cakeBusinessConfig.business.description,
     keywords: [

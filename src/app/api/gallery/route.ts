@@ -1,10 +1,12 @@
 // src/app/api/gallery/route.ts
 // API route to fetch gallery images from Cloudinary by tags
+// Falls back to curated Unsplash images when Cloudinary returns no results
 
 import { NextRequest, NextResponse } from 'next/server';
 import {
     fetchImagesByTags,
     transformCloudinaryImage,
+    getFallbackImages,
     CAKE_TAGS,
     type CakeCategory
 } from '@/lib/cloudinary';
@@ -16,6 +18,7 @@ export async function GET(req: NextRequest) {
 
     try {
         let images = [];
+        let source = 'cloudinary';
 
         if (categoryParam === 'all') {
             // Aggregate images from all categories
@@ -33,17 +36,27 @@ export async function GET(req: NextRequest) {
             }, { status: 400 });
         }
 
+        // If Cloudinary returned no images, use fallback images
+        if (images.length === 0) {
+            images = getFallbackImages(categoryParam);
+            source = 'fallback';
+        }
+
         return NextResponse.json({
             success: true,
-            source: 'cloudinary',
+            source,
             images
         });
     } catch (error) {
         console.error('[Gallery API] Cloudinary error:', error);
 
+        // On error, also fall back to placeholder images
+        const images = getFallbackImages(categoryParam);
+
         return NextResponse.json({
-            success: false,
-            error: 'Failed to fetch images from Cloudinary'
-        }, { status: 500 });
+            success: true,
+            source: 'fallback',
+            images
+        });
     }
 }

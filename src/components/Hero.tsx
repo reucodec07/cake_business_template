@@ -4,7 +4,7 @@ import { cakeBusinessConfig } from '@/lib/cake-business-config';
 
 export function Hero(): JSX.Element {
     const backgroundImage = cakeBusinessConfig.hero.backgroundImage ||
-        'https://res.cloudinary.com/dub5eqaqo/image/upload/v1754565924/melissa-walker-horn-4on47p0-bk4-unsplash_cmeerl.jpg';
+        '/images/hero-bakery-bg.png';
 
     return (
         <section

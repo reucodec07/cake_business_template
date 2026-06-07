@@ -83,7 +83,7 @@ export const cakeBusinessConfig: CakeBusinessConfig = {
         subtitle: "Explore our gallery of custom designs and order the perfect centerpiece for your next big event.",
         ctaText: "Order Your Cake",
         ctaLink: "/contact",
-        backgroundImage: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+        backgroundImage: "/images/hero-bakery-bg.png"
     },
     services: [
         {

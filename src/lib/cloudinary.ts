@@ -229,9 +229,11 @@ export function transformCloudinaryImage(cloudinaryImage: CloudinaryImage, categ
 }
 
 /**
- * Get fallback images for a category - now uses Cloudinary with general tags
+ * Get fallback images when Cloudinary returns no results.
+ * Uses locally stored gallery images that are guaranteed to load and
+ * accurately match their category.
  */
-export function getFallbackImages(): Array<{
+export function getFallbackImages(category?: string): Array<{
     id: string;
     title: string;
     image: string;
@@ -239,9 +241,133 @@ export function getFallbackImages(): Array<{
     category: string;
     created_at: string;
 }> {
-    // Instead of hardcoded images, return empty array
-    // The gallery will show a proper "no images found" state
-    return [];
+    const allFallbacks = [
+        {
+            id: 'fallback-wedding-1',
+            title: 'Elegant White Wedding Cake',
+            image: '/images/gallery/wedding-cake-1.png',
+            fullImage: '/images/gallery/wedding-cake-1.png',
+            category: 'wedding',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-wedding-2',
+            title: 'Rustic Naked Wedding Cake',
+            image: '/images/gallery/wedding-cake-2.png',
+            fullImage: '/images/gallery/wedding-cake-2.png',
+            category: 'wedding',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-birthday-1',
+            title: 'Colorful Birthday Celebration',
+            image: '/images/gallery/birthday-cake-1.png',
+            fullImage: '/images/gallery/birthday-cake-1.png',
+            category: 'birthday',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-birthday-2',
+            title: 'Chocolate Ganache Birthday Cake',
+            image: '/images/gallery/birthday-cake-2.png',
+            fullImage: '/images/gallery/birthday-cake-2.png',
+            category: 'birthday',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-baby-shower-1',
+            title: 'Pastel Baby Shower Cake',
+            image: '/images/gallery/baby-shower-cake.png',
+            fullImage: '/images/gallery/baby-shower-cake.png',
+            category: 'baby-shower',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-christmas-1',
+            title: 'Festive Christmas Cake',
+            image: '/images/gallery/christmas-cake.png',
+            fullImage: '/images/gallery/christmas-cake.png',
+            category: 'christmas',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-cupcakes-1',
+            title: 'Gourmet Cupcake Collection',
+            image: '/images/gallery/cupcakes.png',
+            fullImage: '/images/gallery/cupcakes.png',
+            category: 'cupcakes',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-corporate-1',
+            title: 'Corporate Event Cake',
+            image: '/images/gallery/corporate-cake.png',
+            fullImage: '/images/gallery/corporate-cake.png',
+            category: 'corporate',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-graduation-1',
+            title: 'Graduation Celebration Cake',
+            image: '/images/gallery/graduation-cake.png',
+            fullImage: '/images/gallery/graduation-cake.png',
+            category: 'graduation',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-anniversary-1',
+            title: 'Romantic Anniversary Cake',
+            image: '/images/gallery/anniversary-cake.png',
+            fullImage: '/images/gallery/anniversary-cake.png',
+            category: 'anniversary',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-custom-1',
+            title: 'Custom Artistic Cake',
+            image: '/images/gallery/custom-cake.png',
+            fullImage: '/images/gallery/custom-cake.png',
+            category: 'custom',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-pastries-1',
+            title: 'Fresh Croissants & Pastries',
+            image: '/images/gallery/pastries.png',
+            fullImage: '/images/gallery/pastries.png',
+            category: 'pastries',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-pastries-2',
+            title: 'Artisan Bread Selection',
+            image: '/images/gallery/artisan-bread.png',
+            fullImage: '/images/gallery/artisan-bread.png',
+            category: 'pastries',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-desserts-1',
+            title: 'French Macarons',
+            image: '/images/gallery/macarons.png',
+            fullImage: '/images/gallery/macarons.png',
+            category: 'desserts',
+            created_at: new Date().toISOString()
+        },
+        {
+            id: 'fallback-desserts-2',
+            title: 'Dessert Assortment',
+            image: '/images/gallery/dessert-assortment.png',
+            fullImage: '/images/gallery/dessert-assortment.png',
+            category: 'desserts',
+            created_at: new Date().toISOString()
+        },
+    ];
+
+    if (!category || category === 'all') {
+        return allFallbacks;
+    }
+    return allFallbacks.filter(img => img.category === category);
 }
 
 /**
